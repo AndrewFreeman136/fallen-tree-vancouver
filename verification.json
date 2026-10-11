@@ -1,0 +1,15 @@
+{
+  "pages": 8,
+  "localImageReferences": 70,
+  "localLinks": 83,
+  "errors": [],
+  "checks": [
+    "all original text blocks retained",
+    "all internal resources resolve",
+    "18 work gallery photos",
+    "7 FAQ answers",
+    "no Squarespace runtime or media requests",
+    "no cart",
+    "preview noindex"
+  ]
+}

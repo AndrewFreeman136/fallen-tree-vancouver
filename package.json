@@ -1,0 +1,8 @@
+{
+  "name": "fallen-tree-vancouver",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {"build": "node build.mjs", "check": "node check.mjs", "preview": "node server.mjs"},
+  "engines": {"node": ">=18"}
+}
