@@ -1,9 +1,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {applyEditor} from './editor-content.mjs';
 const root=path.dirname(fileURLToPath(import.meta.url));
 const read=name=>JSON.parse(fs.readFileSync(path.join(root,name),'utf8'));
-const content=read('content/pages.json'), media=read('content/assets.json');
+const content=applyEditor(read('content/pages.json'),root), media=read('content/assets.json');
 const production=process.argv.includes('--production');
 const origin='https://www.fallentreevancouver.com';
 const dist=path.join(root,'dist');
@@ -12,6 +13,12 @@ fs.cpSync(path.join(root,'public'),dist,{recursive:true});
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function asset(src){
   if(!src) return '';
+  if(media.assets.some(a=>a.local_url===src))return src;
+  if(src.startsWith('/assets/')){
+    const file=path.resolve(root,'public',src.slice(1));
+    if(!file.startsWith(path.join(root,'public/assets')+path.sep)||!fs.existsSync(file)||!/^\/(?:[^?#]+)\.(?:png|jpe?g|webp)$/i.test(src))throw Error('Invalid editor image: '+src);
+    return src;
+  }
   if(media.url_map[src]) return media.url_map[src];
   const normalized=decodeURIComponent(src.replace(/^http:/,'https:').replace(/^\/\//,'https://').split('?')[0]);
   const entry=media.assets.find(a=>decodeURIComponent(a.source_url.split('?')[0])===normalized);
@@ -26,7 +33,7 @@ function rule(selector,props,desktop=false){
 function img(b,extra=''){
  const fp=b.focalPoint??{x:.5,y:.5};
  const m=media.assets.find(a=>a.local_url===asset(b.source));
- return `<img src="${asset(b.source)}" alt="${esc(b.alt||m?.caption||'')}" width="${m.width}" height="${m.height}" style="object-position:${fp.x*100}% ${fp.y*100}%" decoding="async" ${extra}>`;
+ return `<img src="${asset(b.source)}" alt="${esc(b.alt||m?.caption||'')}"${m?` width="${m.width}" height="${m.height}"`:''} style="object-position:${fp.x*100}% ${fp.y*100}%" decoding="async" ${extra}>`;
 }
 function composeForm(b,slug){
  const reserve=slug==='/reserve-preservation';
@@ -73,7 +80,7 @@ function section(s,slug,first=false){
  if(s.type==='gallery'){
   const g=s.gallery, aspect=g.aspectRatio==='four-three'?'4/3':'1';
   rule(`#${id} .gallery`,{'--gallery-gap':`${g.gutter}px`,'--gallery-columns':g.numColumns,'--gallery-ratio':aspect});
-  body=`<div class="gallery">${s.blocks.map(b=>`<figure>${img(b,'loading="lazy"')}</figure>`).join('')}</div>`;
+  body=`<div class="gallery">${s.blocks.map(b=>`<figure>${img(b,'loading="lazy"')}${b.title||b.description||b.price?`<figcaption>${b.title?`<strong>${esc(b.title)}</strong>`:''}${b.description?`<p>${esc(b.description)}</p>`:''}${b.price?`<p>${esc(b.price)}</p>`:''}</figcaption>`:''}</figure>`).join('')}</div>`;
  }
  if(s.type==='testimonials')body=`<div class="testimonials"><div class="review-intro">${s.introHtml}</div><div class="reviews">${s.blocks.map(b=>`<blockquote><h2>${esc(b.title)}</h2>${b.html}</blockquote>`).join('')}</div></div>`;
  const bg=s.backgroundImage?`<div class="section-background">${img(s.backgroundImage,'fetchpriority="high" loading="eager"')}</div>`:'';

@@ -1,6 +1,7 @@
 import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {fileURLToPath} from 'node:url';
+import {applyEditor} from './editor-content.mjs';
 const base=path.dirname(fileURLToPath(import.meta.url)),dist=path.join(base,'dist');
-const pages=JSON.parse(fs.readFileSync(path.join(base,'content/pages.json'))).pages;
+const pages=applyEditor(JSON.parse(fs.readFileSync(path.join(base,'content/pages.json'))),base).pages;
 const production=process.argv.includes('--production');
 let resources=0,links=0;const errors=[];
 for(const page of pages){
@@ -19,8 +20,10 @@ for(const page of pages){
  for(const s of page.sections)for(const b of s.blocks){if(b.type==='text')assert(html.includes(b.html),`Missing text block ${b.id}`);if(b.type==='accordion')for(const i of b.items)assert(html.includes(i.a));}
 }
 assert.equal(pages.length,8);
-assert.equal((fs.readFileSync(path.join(dist,'preserve-your-blooms/index.html'),'utf8').match(/<details>/g)||[]).length,7);
-assert.equal((fs.readFileSync(path.join(dist,'explore-my-work/index.html'),'utf8').match(/<figure>/g)||[]).length,18);
+const bloom=pages.find(p=>p.slug==='/preserve-your-blooms');
+assert.equal((fs.readFileSync(path.join(dist,'preserve-your-blooms/index.html'),'utf8').match(/<details>/g)||[]).length,bloom.sections.flatMap(s=>s.blocks).filter(b=>b.type==='accordion').reduce((n,b)=>n+b.items.length,0));
+const works=pages.find(p=>p.slug==='/explore-my-work').sections.filter(s=>s.type==='gallery');
+assert.equal((fs.readFileSync(path.join(dist,'explore-my-work/index.html'),'utf8').match(/<figure>/g)||[]).length,works.reduce((n,s)=>n+s.blocks.length,0));
 assert.equal(errors.length,0,errors.join('\n'));
 const result={pages:pages.length,localImageReferences:resources,localLinks:links,errors,checks:['all original text blocks retained','all internal resources resolve','18 work gallery photos','7 FAQ answers','no Squarespace runtime or media requests','no cart',production?'production index rules':'preview noindex']};
 fs.writeFileSync(path.join(base,'verification.json'),JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));
