@@ -1,0 +1,2035 @@
+{
+  "media": {
+    "input": "public/assets",
+    "output": "/assets",
+    "extensions": [
+      "jpg",
+      "jpeg",
+      "png",
+      "webp"
+    ],
+    "rename": "random"
+  },
+  "settings": {
+    "content": {
+      "merge": true
+    }
+  },
+  "content": [
+    {
+      "name": "works",
+      "label": "Works — add, reorder or hide",
+      "type": "file",
+      "path": "content/editor/works.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "items",
+          "label": "Works",
+          "type": "object",
+          "list": true,
+          "fields": [
+            {
+              "name": "gallery",
+              "label": "Gallery group",
+              "type": "string",
+              "hidden": true,
+              "default": "68edc1af744f995768fef779"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "string"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "text"
+            },
+            {
+              "name": "price",
+              "label": "Displayed price (optional)",
+              "type": "string"
+            },
+            {
+              "name": "visible",
+              "label": "Visible on website",
+              "type": "boolean"
+            },
+            {
+              "name": "photos",
+              "label": "Photos",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "source",
+                  "label": "Photo",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Image description",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "home",
+      "label": "Fallen Tree Vancouver",
+      "type": "file",
+      "path": "content/editor/home.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Page title",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "label": "Search description",
+          "type": "text"
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760157637784_4261",
+          "label": "Nature · Emotion · Preservation          handcrafted resin art in",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Nature · Emotion · Preservation          handcrafted resin art in",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_68e491418560745fb61aa829_background",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "b_block_425e60b82c95c405cd23",
+          "label": "My name is Irina, the artist behind Fallen Tree Vancouver. I crea",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "My name is Irina, the artist behind Fallen Tree Vancouver. I crea",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_0834d1f28ceb356ccab5",
+          "label": "Behind The Art",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Behind The Art",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_d8f5970a1a4665ecff33",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760479975917_162928",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760479975917_2121",
+          "label": "Where to find our products:",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Where to find our products:",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_37a9847c0c124c358c8e",
+          "label": "🛍️ Shop Makers     📍  North Vancouver  (125 Victory Ship Way #124",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "🛍️ Shop Makers     📍  North Vancouver  (125 Victory Ship Way #124",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1790703601281_9245",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "b_block_45d16444adde7a7c3133",
+          "label": "🛍️ Shipyards Christmas Market 2026    December 11-17th   📍  North",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "🛍️ Shipyards Christmas Market 2026    December 11-17th   📍  North",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760679000228_2214",
+          "label": "Preserve Your Flowers",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Preserve Your Flowers",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760679000228_2697",
+          "label": "Bouquets fade, but memories don’t have to. We carefully preserve ",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Bouquets fade, but memories don’t have to. We carefully preserve ",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760679000228_3814",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "b_block_034edb872429e5946d13",
+          "label": "Follow Us On Social",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Follow Us On Social",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_92c5891c60965c075d16",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "b_block_85fa5b996b230cc87a1e",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "b_block_f7938b80dbbaf27f6505",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "b_block_26172ed9b392d7d6998a",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760679000228_4820",
+          "label": "Get In Touch",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Get In Touch",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760679000228_5290",
+          "label": "Have a question about a piece, a workshop, or flower preservation",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Have a question about a piece, a workshop, or flower preservation",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "about-2",
+      "label": "About",
+      "type": "file",
+      "path": "content/editor/about-2.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Page title",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "label": "Search description",
+          "type": "text"
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760310748972_4385",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760310748972_2695",
+          "label": "My Story",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "My Story",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760310748972_2695_1",
+          "label": "Hi, my name is  Irina , and Fallen Tree Vancouver is the heart of",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Hi, my name is  Irina , and Fallen Tree Vancouver is the heart of",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760310748972_16341",
+          "label": "“The little girl in me would never have believed I'd end up here”",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "“The little girl in me would never have believed I'd end up here”",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760310748972_12446",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760310748972_6864",
+          "label": "How It Began  My journey as an artist started in 2020 during the ",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "How It Began  My journey as an artist started in 2020 during the ",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760310748972_17030",
+          "label": "“In a time of uncertainty, I found the clarity of art”",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "“In a time of uncertainty, I found the clarity of art”",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760310748972_23429",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760310748972_20422",
+          "label": "Why Resin Art  Resin became more than a material for me - it beca",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Why Resin Art  Resin became more than a material for me - it beca",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760310748972_21532",
+          "label": "“Resin taught me that nothing truly beautiful is ever lost”",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "“Resin taught me that nothing truly beautiful is ever lost”",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760310748972_25943",
+          "label": "What I Create  Today, I design one-of-a-kind pieces - coasters, t",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "What I Create  Today, I design one-of-a-kind pieces - coasters, t",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760310748972_27204",
+          "label": "“I believe every shell, every petal, and every wave deserves to b",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "“I believe every shell, every petal, and every wave deserves to b",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760310748972_31818",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760310748972_60879",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760310748972_30865",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760310748972_32625",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760310748972_34632",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760310748972_66355",
+          "label": "Thank You  Thank you for visiting Fallen Tree Vancouver and being",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Thank You  Thank you for visiting Fallen Tree Vancouver and being",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760310748972_68750",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "contact",
+      "label": "Contact",
+      "type": "file",
+      "path": "content/editor/contact.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Page title",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "label": "Search description",
+          "type": "text"
+        },
+        {
+          "name": "b_block_eb82a4767cd196a1b98e",
+          "label": "Get In Touch",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Get In Touch",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_3039dec8e9cdd22f6007",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "explore-my-work",
+      "label": "Explore My Work",
+      "type": "file",
+      "path": "content/editor/explore-my-work.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Page title",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "label": "Search description",
+          "type": "text"
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760386003782_11918",
+          "label": "Explore My Work",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Explore My Work",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760386003782_12710",
+          "label": "Ocean-Inspired Coasters &amp; Trays",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Ocean-Inspired Coasters &amp; Trays",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760386003782_13376",
+          "label": "Floral Keepsakes",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Floral Keepsakes",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760386003782_14526",
+          "label": "Everyday Treasures",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Everyday Treasures",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hidden-sections",
+      "label": "hidden sections",
+      "type": "file",
+      "path": "content/editor/hidden-sections.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Page title",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "label": "Search description",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "name": "home",
+      "label": "Fallen Tree Vancouver",
+      "type": "file",
+      "path": "content/editor/home.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Page title",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "label": "Search description",
+          "type": "text"
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760157637784_4261",
+          "label": "Nature · Emotion · Preservation          handcrafted resin art in",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Nature · Emotion · Preservation          handcrafted resin art in",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_68e491418560745fb61aa829_background",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "b_block_425e60b82c95c405cd23",
+          "label": "My name is Irina, the artist behind Fallen Tree Vancouver. I crea",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "My name is Irina, the artist behind Fallen Tree Vancouver. I crea",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_0834d1f28ceb356ccab5",
+          "label": "Behind The Art",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Behind The Art",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_d8f5970a1a4665ecff33",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760479975917_162928",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760479975917_2121",
+          "label": "Where to find our products:",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Where to find our products:",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_37a9847c0c124c358c8e",
+          "label": "🛍️ Shop Makers     📍  North Vancouver  (125 Victory Ship Way #124",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "🛍️ Shop Makers     📍  North Vancouver  (125 Victory Ship Way #124",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1790703601281_9245",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "b_block_45d16444adde7a7c3133",
+          "label": "🛍️ Shipyards Christmas Market 2026    December 11-17th   📍  North",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "🛍️ Shipyards Christmas Market 2026    December 11-17th   📍  North",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760679000228_2214",
+          "label": "Preserve Your Flowers",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Preserve Your Flowers",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760679000228_2697",
+          "label": "Bouquets fade, but memories don’t have to. We carefully preserve ",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Bouquets fade, but memories don’t have to. We carefully preserve ",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760679000228_3814",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "b_block_034edb872429e5946d13",
+          "label": "Follow Us On Social",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Follow Us On Social",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_92c5891c60965c075d16",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "b_block_85fa5b996b230cc87a1e",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "b_block_f7938b80dbbaf27f6505",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "b_block_26172ed9b392d7d6998a",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760679000228_4820",
+          "label": "Get In Touch",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Get In Touch",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760679000228_5290",
+          "label": "Have a question about a piece, a workshop, or flower preservation",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Have a question about a piece, a workshop, or flower preservation",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "preserve-your-blooms",
+      "label": "Preserve Your Bouquet",
+      "type": "file",
+      "path": "content/editor/preserve-your-blooms.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Page title",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "label": "Search description",
+          "type": "text"
+        },
+        {
+          "name": "b_block_d3b5da357791505ccd47",
+          "label": "Preserve your flowers, keep the memory forever    Wedding bouquet",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Preserve your flowers, keep the memory forever    Wedding bouquet",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_9225e71d5b75b1a6ac3f",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760595576456_5736",
+          "label": "How It Works  Our Process:",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "How It Works  Our Process:",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760595576456_6780",
+          "label": "Book your spot  - reserve your date with a quick form     Drop of",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Book your spot  - reserve your date with a quick form     Drop of",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760643169114_2450",
+          "label": "Pricing",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Pricing",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760643169114_3082",
+          "label": "Flower preservation prices start at $150 CAD. Prices vary by size",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Flower preservation prices start at $150 CAD. Prices vary by size",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_68f155864f1abc197f07ac46",
+          "label": "FAQs  We know flower preservation can feel like a new world. Here",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "FAQs  We know flower preservation can feel like a new world. Here",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_68f155860716fed6e1dd760f",
+          "label": "FAQ",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "items",
+              "label": "Questions and answers",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "q",
+                  "label": "Question",
+                  "type": "string"
+                },
+                {
+                  "name": "a",
+                  "label": "Answer",
+                  "type": "rich-text",
+                  "options": {
+                    "format": "html",
+                    "media": false
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1760645559018_3009",
+          "label": "Still have questions? Reach out anytime -  we’d love to hear from",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Still have questions? Reach out anytime -  we’d love to hear from",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "reserve-preservation",
+      "label": "Reserve Preservation",
+      "type": "file",
+      "path": "content/editor/reserve-preservation.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Page title",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "label": "Search description",
+          "type": "text"
+        },
+        {
+          "name": "b_block_4ef7e3cd26da4520d1cd",
+          "label": "CONTACT",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "CONTACT",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_7ac899fc33234e0038d8",
+          "label": "Photo",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "source",
+              "label": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Image description",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "footer",
+      "label": "Footer",
+      "type": "file",
+      "path": "content/editor/footer.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Page title",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "label": "Search description",
+          "type": "text"
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1759814419048_2047",
+          "label": "Fallen Tree Vancouver    Where Nature Meets Art",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Fallen Tree Vancouver    Where Nature Meets Art",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_17bb7f8d18e4bca8c5ce",
+          "label": "fallentreevancouver@gmail.com",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "fallentreevancouver@gmail.com",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "b_block_yui_3_17_2_1_1759814419048_2527",
+          "label": "Fallen Tree Vancouver 2026. All Rights Reserved.",
+          "type": "object",
+          "fields": [
+            {
+              "name": "id",
+              "label": "ID",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "html",
+              "label": "Fallen Tree Vancouver 2026. All Rights Reserved.",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "media": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
