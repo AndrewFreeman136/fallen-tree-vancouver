@@ -26,11 +26,24 @@ h1,h2,h3,h4{letter-spacing:-.015em;line-height:1.3}
 @media(max-width:767px){.first-section.has-background .cell-text>.cell-inner{padding:14px 16px;border-radius:12px}}
 
 
-/* Replace the inline coral accent with readable amber. */
-.cell-text span[style*="#f55e53" i]{color:#8a5700!important}
-.theme-bright .cell-text span[style*="#f55e53" i],.theme-black .cell-text span[style*="#f55e53" i]{color:#ffd27a!important}
 
 
 
-/* Give the How It Began quote the same breathing room as the following story sections. */
-#section-68ec4a2c9115a51e0a8cae56 #block-yui_3_17_2_1_1760310748972_17030{transform:translateY(51px)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Separate About quotes from the paragraphs above at every viewport size. */
+#section-68ec4a2c9115a51e0a8cae56 #block-yui_3_17_2_1_1760310748972_17030,#section-68ec6d16b727cf40fbba6a31 #block-yui_3_17_2_1_1760310748972_27204{transform:translateY(48px)}
