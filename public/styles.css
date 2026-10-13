@@ -45,5 +45,5 @@ h1,h2,h3,h4{letter-spacing:-.015em;line-height:1.3}
 
 
 
-/* Keep the final quotes distinct from the body copy on mobile. */
-@media(max-width:767px){#section-68ec4a2c9115a51e0a8cae56 #block-yui_3_17_2_1_1760310748972_17030{transform:translateY(48px)}#section-68ec6d16b727cf40fbba6a31 #block-yui_3_17_2_1_1760310748972_27204{transform:translateY(48px)}}
+/* Separate About quotes from the paragraphs above at every viewport size. */
+#section-68ec4a2c9115a51e0a8cae56 #block-yui_3_17_2_1_1760310748972_17030,#section-68ec6d16b727cf40fbba6a31 #block-yui_3_17_2_1_1760310748972_27204{transform:translateY(48px)}
