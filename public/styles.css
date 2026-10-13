@@ -28,6 +28,10 @@ h1,h2,h3,h4{letter-spacing:-.015em;line-height:1.3}
 
 
 
+
+
+
+
 /* Replace the inline coral accent with readable amber. */
 .cell-text span[style*="#f55e53" i]{color:#8a5700!important}
 .theme-bright .cell-text span[style*="#f55e53" i],.theme-black .cell-text span[style*="#f55e53" i]{color:#ffd27a!important}
@@ -37,11 +41,6 @@ h1,h2,h3,h4{letter-spacing:-.015em;line-height:1.3}
 
 
 
-/* Give the How It Began quote the same breathing room as the following story sections. */
-#section-68ec4a2c9115a51e0a8cae56 #block-yui_3_17_2_1_1760310748972_17030{transform:translateY(51px)}
-
-
-
-/* Keep booking calls-to-action inside their pill shape at every viewport width. */
-.cell-button .button{min-width:0;overflow-wrap:anywhere}
-#block-9e8b31be21ffd732fa33 .button{width:170px;max-width:calc(100vw - 48px);padding:16px 18px;white-space:normal}
+/* Correct the booking label without altering the booking link. */
+#block-9e8b31be21ffd732fa33 .button{font-size:0}
+#block-9e8b31be21ffd732fa33 .button:before{content:"BOOK YOUR PRESERVATION";font-size:14px}
