@@ -24,3 +24,7 @@ h1,h2,h3,h4{letter-spacing:-.015em;line-height:1.3}
 .reviews h2{font-family:'Nunito Sans',sans-serif;font-weight:600;letter-spacing:0;line-height:1.65}
 .enquiry,.enquiry input,.enquiry textarea{letter-spacing:.015em}
 @media(max-width:767px){.first-section.has-background .cell-text>.cell-inner{padding:14px 16px;border-radius:12px}}
+
+/* Replace the inline coral accent with readable amber. */
+.cell-text span[style*="#f55e53" i]{color:#8a5700!important}
+.theme-bright .cell-text span[style*="#f55e53" i],.theme-black .cell-text span[style*="#f55e53" i]{color:#ffd27a!important}
