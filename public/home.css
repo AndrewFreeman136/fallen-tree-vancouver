@@ -1,0 +1,23 @@
+body[data-page="/"],body[data-page="/home"]{background:#f1eee5;color:#263c31}
+.home-redesign{background:#f1eee5;color:#263c31;font-family:'Nunito Sans',Arial,sans-serif}
+.home-redesign *{box-sizing:border-box}
+.home-redesign h1,.home-redesign h2,.home-redesign p{margin:0}
+.home-hero{display:grid;grid-template-columns:46% 54%;min-height:630px}
+.home-hero-copy{padding:8% 10%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:20px}
+.home-redesign .home-eyebrow{font:700 13px/1.4 'Nunito Sans',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase}
+.home-redesign h1,.home-redesign h2{font-family:'Sansita',Georgia,serif;font-weight:600;line-height:1.1}
+.home-redesign h1{font-size:clamp(3rem,5.2vw,4.8rem);letter-spacing:-.035em}
+.home-hero-copy>p:not(.home-eyebrow):not(.home-note){font-size:1.15rem;line-height:1.55;max-width:34rem}
+.home-redesign .home-note{font:italic 1.2rem/1.4 Georgia,serif;color:#7b5d47}
+.home-action,.home-story-action{display:inline-block;padding:13px 23px;text-decoration:none;font-size:.9rem;font-weight:700}
+.home-action{background:#455c4a;color:white;border-radius:3px}
+.home-story-action{border:1px solid #263c31;color:#263c31;border-radius:3px;margin-top:18px}
+.home-action:hover,.home-action:focus-visible{background:#304d3b;color:white}.home-story-action:hover,.home-story-action:focus-visible{background:#263c31;color:white}
+.home-hero-photo{min-width:0;overflow:hidden}.home-hero-photo img{display:block;width:100%;height:100%;min-height:630px;object-fit:cover;object-position:center 64%}
+.home-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;padding:34px 6%;background:#e8e7db;border-top:1px solid #d7d3c5;border-bottom:1px solid #d7d3c5}
+.home-facts h2{font-size:1.7rem}.home-facts p{font-size:.93rem;margin-top:8px;line-height:1.5}
+.home-story{display:grid;grid-template-columns:40% 1fr;gap:50px;align-items:center;padding:65px 7% 80px}
+.home-story img{display:block;width:100%;height:310px;object-fit:cover;object-position:center 62%}
+.home-story h2{font-size:clamp(2.1rem,3vw,3rem);margin:12px 0 18px}
+.home-story p:not(.home-eyebrow){font-size:1.08rem;line-height:1.6;max-width:43rem}
+@media(max-width:767px){.home-hero,.home-story{grid-template-columns:1fr}.home-hero-photo{order:-1}.home-hero-photo img{height:410px;min-height:410px}.home-hero-copy{padding:48px 7%;gap:20px}.home-redesign h1{font-size:clamp(2.8rem,10vw,3.5rem)}.home-facts{grid-template-columns:1fr 1fr;padding:28px 7%;gap:25px}.home-facts>div:last-child{grid-column:1/-1}.home-story{padding:45px 7%;gap:25px}.home-story img{height:275px}}
