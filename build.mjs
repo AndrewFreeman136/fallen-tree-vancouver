@@ -70,6 +70,12 @@ function block(b,slug){
  return `<div id="${esc(b.id)}" class="cell cell-${esc(b.type)}"><div class="cell-inner">${inner}</div></div>`;
 }
 function section(s,slug,first=false){
+ if(s.id==='68e491418560745fb61aa844'&&['/','/home'].includes(slug)){
+ const names=['Coastal resin art','Preserving flowers','Behind the scenes with Irina','Botanical keepsakes'];
+ const photos=s.blocks.filter(b=>b.type==='image');
+ return `<section class="home-social" aria-labelledby="social-title"><div class="social-heading"><div><p class="social-kicker">From my studio to your feed</p><div id="social-title">${s.blocks.find(b=>b.type==='text').html}</div><p>See the process, the details, and the pieces taking shape.</p></div><a class="social-follow" href="https://www.instagram.com/fallentreevancouver/" target="_blank" rel="noopener noreferrer">Follow on Instagram<span>@fallentreevancouver</span></a></div><div class="social-photos">${photos.map((b,i)=>`<a href="${esc(b.href)}" target="_blank" rel="noopener noreferrer" aria-label="${names[i]} — view on Instagram (opens in a new tab)">${img({...b,alt:names[i]},'loading="lazy"')}<span>${names[i]}</span></a>`).join('')}</div></section>`;
+ }
+
  const id=`section-${s.id}`; const size=s.styles.sectionHeight?.replace('section-height--','')??'custom';
  let body='';
  if(s.type==='fluid'){
