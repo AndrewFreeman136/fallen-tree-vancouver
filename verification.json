@@ -1,7 +1,7 @@
 {
   "pages": 8,
-  "localImageReferences": 70,
-  "localLinks": 83,
+  "localImageReferences": 74,
+  "localLinks": 90,
   "errors": [],
   "checks": [
     "all original text blocks retained",
@@ -10,6 +10,7 @@
     "7 FAQ answers",
     "no Squarespace runtime or media requests",
     "no cart",
-    "preview noindex"
+    "FormSubmit POST, required fields, CAPTCHA disabled, honeypot retained, confirmation page",
+    "production index rules"
   ]
 }

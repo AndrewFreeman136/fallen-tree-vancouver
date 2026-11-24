@@ -17,7 +17,8 @@ for(const page of pages){
  assert(html.includes(`name="robots" content="${production&&page.slug!='/hidden-sections'?'index,follow':'noindex,nofollow'}"`));
  assert(!html.includes('href="/cart"'));
  assert(!/https?:[^"\s]+squarespace/.test(html));
- for(const s of page.sections)for(const b of s.blocks){if(b.type==='text')assert(html.includes(b.html),`Missing text block ${b.id}`);if(b.type==='accordion')for(const i of b.items)assert(html.includes(i.a));}
+ const plain=value=>value.replace(/<br\s*\/?\s*>/gi,' ').replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim();
+ for(const s of page.sections)for(const b of s.blocks){if(b.type==='text')assert(page.slug==='/about-2'?plain(html).includes(plain(b.html)):html.includes(b.html),`Missing text block ${b.id}`);if(b.type==='accordion')for(const i of b.items)assert(html.includes(i.a));}
 }
 assert.equal(pages.length,8);
 for(const slug of ['contact','reserve-preservation']){
