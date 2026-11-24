@@ -26,3 +26,5 @@ body[data-page="/"],body[data-page="/home"]{background:#f1eee5;color:#263c31}
 .find-footer{max-width:1200px;margin:35px auto 0;padding-top:22px;border-top:1px solid #d7dccf;display:flex;justify-content:space-between;gap:20px;color:#526252;font-size:.9rem}.find-footer a{color:inherit;text-underline-offset:4px}@media(max-width:767px){.find-market>a{margin-left:auto}.find-footer{flex-direction:column;gap:10px}}
 
 .find-shop-online{display:inline-flex;align-items:center;min-height:44px;margin-top:24px;padding:10px 18px;border:1px solid #496957;border-radius:7px;color:#294537;text-decoration:none;font-size:.9rem;font-weight:700}.find-shop-online:hover{background:#e4eadf}.find-market{justify-content:center;gap:28px}.find-market>a{margin:0 0 0 12px}.find-footer{justify-content:center;text-align:center;margin-top:24px;padding-top:18px}@media(max-width:767px){.find-market{justify-content:flex-start;gap:20px}.find-market>a{margin-left:auto}.find-footer{text-align:left;align-items:flex-start}}
+
+.find-footer{border-top:0}
