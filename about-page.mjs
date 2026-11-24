@@ -29,7 +29,7 @@ export function renderAboutPage(page){
   ].map(([src,alt])=>figure(src,alt,'ft-gallery-photo')).join('');
   return `<div class="ft-about">
     <section class="ft-began"><div class="ft-chapter-inner">
-      <div class="ft-chapter-copy"><span class="ft-eyebrow">01 · The story</span><h1>${inner('6864','h3')}</h1><p>${inner('6864','p','class="sqsrte-large"')}</p><blockquote>${inner('17030','em')}</blockquote></div>
+      <div class="ft-chapter-copy"><span class="ft-eyebrow">The story</span><h1>${inner('6864','h3')}</h1><p>${inner('6864','p','class="sqsrte-large"')}</p><blockquote>${inner('17030','em')}</blockquote></div>
       ${image('12446','Irina working with resin in her studio','ft-chapter-photo')}
     </div></section>
     <section class="ft-story"><div class="ft-story-inner">
@@ -37,10 +37,10 @@ export function renderAboutPage(page){
       ${image('4385','Irina overlooking the Vancouver coast','ft-story-photo')}
     </div></section>
     <section class="ft-resin"><div class="ft-chapter-inner">
-      <div class="ft-chapter-copy"><span class="ft-eyebrow">02 · The story</span><h2>${inner('20422','h3')}</h2><p>${inner('20422','p','class="sqsrte-large"')}</p><blockquote>${inner('21532','em')}</blockquote></div>
+      <div class="ft-chapter-copy"><span class="ft-eyebrow">The story</span><h2>${inner('20422','h3')}</h2><p>${inner('20422','p','class="sqsrte-large"')}</p><blockquote>${inner('21532','em')}</blockquote></div>
       ${image('23429','Flowers preserved in resin','ft-chapter-photo')}
     </div></section>
-    <section class="ft-create"><div class="ft-create-copy"><span class="ft-eyebrow">03 · The work</span><h2>${inner('25943','h3')}</h2><p>${inner('25943','p','class="sqsrte-large"')}</p><blockquote>${inner('27204','em')}</blockquote></div><div class="ft-gallery">${gallery}</div></section>
+    <section class="ft-create"><div class="ft-create-copy"><span class="ft-eyebrow">The work</span><h2>${inner('25943','h3')}</h2><p>${inner('25943','p','class="sqsrte-large"')}</p><blockquote>${inner('27204','em')}</blockquote></div><div class="ft-gallery">${gallery}</div></section>
     <section class="ft-thanks"><div class="ft-thanks-inner">
       ${image('68750','Floral resin keepsake in hand','ft-thanks-photo')}
       <div class="ft-thanks-copy"><span class="ft-eyebrow">A note from Irina</span><h2>${inner('66355','h3')}</h2><p>${inner('66355','p','class="sqsrte-large"')}</p></div>
