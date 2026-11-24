@@ -56,3 +56,5 @@ body[data-page="/about-2"] main .cell-text h3{margin:0 0 36px}body[data-page="/a
 body[data-page="/about-2"] main .cell-text p{margin:0}body[data-page="/about-2"] main .cell-text p+p:not(:empty){margin-top:20px}
 
 .header .brand{width:112px}.header .brand img{width:112px;height:94px}@media(max-width:767px){.header .brand,.header .brand img{width:52px;height:54px}}
+
+@media(max-width:767px){.header{height:86px;padding:8px 6vw}.header .brand,.header .brand img{width:76px;height:72px}}
