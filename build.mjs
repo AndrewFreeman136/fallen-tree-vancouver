@@ -89,7 +89,7 @@ function section(s,slug,first=false){
   rule(`#${id} .gallery`,{'--gallery-gap':`${g.gutter}px`,'--gallery-columns':g.numColumns,'--gallery-ratio':aspect});
   body=`<div class="gallery">${s.blocks.map(b=>`<figure>${img(b,'loading="lazy"')}${b.title||b.description||b.price?`<figcaption>${b.title?`<strong>${esc(b.title)}</strong>`:''}${b.description?`<p>${esc(b.description)}</p>`:''}${b.price?`<p>${esc(b.price)}</p>`:''}</figcaption>`:''}</figure>`).join('')}</div>`;
  }
- if(s.type==='testimonials')body=`<div class="testimonials"><div class="review-intro">${s.introHtml}</div><div class="reviews">${s.blocks.map(b=>`<blockquote><h2>${esc(b.title)}</h2>${b.html}</blockquote>`).join('')}</div></div>`;
+ if(s.type==='testimonials')body=`<div class="testimonials"><div class="review-intro">${['/','/home'].includes(slug)?'<p class="testimonial-label">From the people who chose my work</p><h2>Loved in their homes</h2>':s.introHtml}</div><div class="reviews">${s.blocks.map(b=>`<blockquote><h2>${esc(b.title)}</h2>${b.html}</blockquote>`).join('')}</div></div>`;
  const bg=s.backgroundImage?`<div class="section-background">${img(s.backgroundImage,'fetchpriority="high" loading="eager"')}</div>`:'';
  return `<section id="${id}" class="section theme-${s.theme||'default'} size-${size} type-${s.type}${first?' first-section':''}${s.backgroundImage?' has-background':''}">${bg}${body}</section>`;
 }
