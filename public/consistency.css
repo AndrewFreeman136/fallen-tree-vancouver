@@ -1,0 +1,76 @@
+/* Shared spacing rhythm; content determines height rather than empty grid rows. */
+:root{--section-space:64px;--content-gutter:6vw;--content-width:1200px;--copy-gap:20px;--header-space:108.4px}
+.section.rhythm-stack,.section.rhythm-form,.section.rhythm-split,.section.rhythm-title,.section.rhythm-footer{min-height:0}
+:is(.rhythm-stack,.rhythm-form,.rhythm-split,.rhythm-title,.rhythm-footer)>.section-content{padding:var(--section-space) var(--content-gutter)!important}
+:is(.rhythm-stack,.rhythm-form,.rhythm-split,.rhythm-title,.rhythm-footer) .layout{display:grid!important;grid-template-columns:minmax(0,1fr)!important;grid-template-rows:none!important;grid-auto-rows:auto!important;gap:24px!important;width:100%;max-width:var(--content-width);margin:auto;overflow:visible!important}
+:is(.rhythm-stack,.rhythm-form,.rhythm-split,.rhythm-title,.rhythm-footer) .layout>.cell{grid-area:auto!important;transform:none!important;min-width:0}
+:is(.rhythm-stack,.rhythm-form,.rhythm-split,.rhythm-title,.rhythm-footer) .cell-inner{height:auto!important;justify-content:flex-start!important}
+:is(.rhythm-stack,.rhythm-form,.rhythm-split,.rhythm-title,.rhythm-footer) :is(h1,h2,h3,h4,p){margin:0}
+:is(.rhythm-stack,.rhythm-form,.rhythm-split,.rhythm-title) .cell-text :is(h1,h2,h3,h4)+*{margin-top:20px}
+:is(.rhythm-stack,.rhythm-form,.rhythm-split) .cell-text p+p{margin-top:16px}
+:is(.rhythm-stack,.rhythm-form,.rhythm-split,.rhythm-title) .cell-text p:empty{display:none}
+:is(.rhythm-stack,.rhythm-form,.rhythm-split,.rhythm-title) .cell-text :is(h1,h2,h3){font-size:clamp(2rem,3vw,3rem);line-height:1.15}
+:is(.rhythm-stack,.rhythm-form,.rhythm-split) .cell-text p{font-size:1.067rem;line-height:1.65}
+.rhythm-stack .layout{max-width:800px;text-align:center}
+.rhythm-stack .cell-text :is(h1,h2,h3,h4,p){text-align:center!important}
+.rhythm-stack ol{text-align:left;padding-left:26px;margin:0}.rhythm-stack li+li{margin-top:18px}
+.rhythm-stack .cell-accordion{text-align:left}.rhythm-stack .answer p{text-align:left!important}
+.rhythm-stack .cell-image{height:clamp(280px,38vw,480px);container-type:normal}
+.rhythm-stack .cell-image>.cell-inner{position:static;height:100%!important}
+.rhythm-stack .image-frame{border-radius:18px}
+.rhythm-title>.section-content{padding-bottom:0!important}
+.rhythm-title .layout{text-align:center;gap:0!important}
+.rhythm-title .cell-text :is(h1,h2,h3){text-align:center!important}
+body[data-page='/explore-my-work'] .rhythm-title:not(.first-section)>.section-content{padding-top:32px!important}
+.rhythm-gallery .gallery{width:calc(100% - 2 * var(--content-gutter));max-width:var(--content-width);padding:28px 0 var(--section-space);gap:24px}
+.rhythm-gallery figure{border-radius:16px}
+.rhythm-form .layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:28px 56px!important;align-items:start}
+.section.rhythm-form .layout>.cell-text{grid-column:1!important;grid-row:1!important}
+.section.rhythm-form .layout>.cell-form{grid-column:1!important;grid-row:2!important}
+.section.rhythm-form .layout>.cell-image{grid-column:2!important;grid-row:1 / span 2!important;height:650px;container-type:normal}
+.rhythm-form .cell-image>.cell-inner{position:static;height:100%!important}
+.rhythm-form .image-frame{border-radius:18px}
+.enquiry{font-size:1rem}.enquiry input,.enquiry textarea{font-size:16px;border-radius:10px;min-height:46px}.enquiry label{margin-bottom:20px}.enquiry .direct-email{font-size:14px;margin-top:20px}
+.rhythm-split .layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:22px 56px!important;align-content:center}
+.section.rhythm-split .layout>.cell-text,.section.rhythm-split .layout>.cell-button{grid-column:1!important}.rhythm-split .cell-button .cell-inner{align-items:flex-start}
+.section.rhythm-split .layout>.cell-image{grid-column:2!important;grid-row:1 / span 3!important;height:440px;container-type:normal}
+.rhythm-split .cell-image>.cell-inner{position:static;height:100%!important}.rhythm-split .image-frame{border-radius:18px}
+.rhythm-footer .layout{grid-template-columns:1fr auto 1fr!important;align-items:center;gap:28px!important}
+.rhythm-footer .layout>.cell:last-child{grid-column:1/-1!important;text-align:center;font-size:14px}
+.rhythm-footer h4{font:600 16px/1.6 'Nunito Sans',sans-serif;letter-spacing:0}
+.rhythm-footer .social-link{min-height:44px;min-width:44px;justify-content:center;align-items:center}
+.button,.home-action,.home-story-action,.find-addresses a,.find-shop-online,.find-market>a{min-height:46px;display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;font-size:15px;line-height:1.4;border-radius:7px;text-transform:none;letter-spacing:0}
+.home-hero-copy{padding-top:calc(var(--header-space) + 40px);padding-bottom:64px}.home-hero{min-height:700px}.home-hero-photo img{min-height:700px}
+.home-story,.find-us,.home-social{padding:var(--section-space) var(--content-gutter)}
+#section-68eee939b5d13e2a84c6f69a{padding:var(--section-space) var(--content-gutter)}
+.ft-chapter-inner,.ft-story-inner,.ft-thanks-inner{padding:var(--section-space) var(--content-gutter);max-width:calc(var(--content-width) + 2 * var(--content-gutter));margin:auto}
+.ft-create{padding:var(--section-space) var(--content-gutter)}
+.ft-about .ft-eyebrow,.home-redesign .home-eyebrow,.find-label,.home-social .social-kicker{font-size:14px}
+.home-facts{text-align:center}.home-facts p{font-size:16px}
+.ft-about{padding-top:var(--header-space)}
+.not-found{max-width:800px;margin:0 auto;padding:calc(var(--header-space) + 48px) var(--content-gutter) 64px}.not-found h1{font-size:clamp(2rem,4vw,3rem);margin:0 0 24px}.not-found p{margin:20px 0}
+@media(max-width:767px){
+:root{--section-space:44px;--content-gutter:6vw;--header-space:86px}
+.first-section{padding-top:var(--header-space)}
+.home-hero-copy{padding:44px var(--content-gutter);align-items:center;text-align:center}.home-hero{min-height:0}.home-hero-photo img{min-height:0;height:410px}
+.home-facts{padding:36px var(--content-gutter);gap:28px}
+.home-story{gap:28px}.home-story img{max-width:440px;margin:auto}.home-story-action{margin-top:24px}
+.find-market>a{align-self:center;margin-left:0;margin-right:0}.find-market{gap:20px}.find-market .find-date{font-size:18px}.find-store>img{height:260px}.find-intro{margin-bottom:28px}
+.find-store-copy{padding:28px 22px}.find-store-copy h2{font-size:30px}.find-label{font-size:12px}
+.ft-chapter-copy,.ft-story-copy,.ft-thanks-copy{text-align:center}.ft-about p{margin-left:auto;margin-right:auto}.ft-about h1,.ft-about h2,.ft-about .ft-story h2{font-size:clamp(2rem,9vw,2.6rem)}
+.rhythm-form .layout,.rhythm-split .layout,.rhythm-footer .layout{grid-template-columns:minmax(0,1fr)!important;gap:28px!important}
+.section.rhythm-form .layout>.cell,.section.rhythm-split .layout>.cell,.section.rhythm-footer .layout>.cell{grid-column:1!important;grid-row:auto!important}
+.rhythm-form .cell-text{text-align:center}.rhythm-form .cell-text :is(h1,h2,h3){text-align:center!important}
+.rhythm-form .cell-image{height:360px}.rhythm-form .cell-form{order:0}.rhythm-form .cell-image{order:1}
+.rhythm-split .cell-image{height:340px;order:-1}
+.rhythm-split .cell-text :is(h1,h2,h3,p){text-align:center!important}.rhythm-split .cell-button .cell-inner{align-items:center}
+.rhythm-footer :is(h4,p){text-align:center!important}.rhythm-footer>.section-content{padding-top:36px!important;padding-bottom:36px!important}
+.rhythm-gallery .gallery{gap:16px;padding-top:24px}.rhythm-stack .cell-image{height:320px}
+.cell-accordion summary{min-height:52px;font-size:19px;line-height:1.4;padding-top:18px;padding-bottom:18px}
+.home-social .social-photos{gap:24px 16px}.home-social .social-heading{margin-bottom:28px}
+}
+@media(min-width:768px) and (max-width:1050px){.header nav{gap:18px}.header nav a{font-size:14px}.rhythm-form .layout,.rhythm-split .layout{column-gap:32px!important}.find-store-copy{padding:28px}.find-addresses{gap:18px}}
+@media(min-width:768px){.home-hero-photo{position:relative}.home-hero-photo img{position:absolute;inset:0;width:100%;height:100%;min-height:0}.home-hero-copy{min-height:700px}}
+.rhythm-stack ol p{text-align:left!important}
+/* Keep a clear desktop gutter between market copy and its action. */
+@media(min-width:768px){.find-market{display:grid;grid-template-columns:100px minmax(0,1fr) auto;column-gap:clamp(32px,4vw,56px)}.find-market>div{min-width:0}.find-market>a{margin:0;justify-self:end}}
