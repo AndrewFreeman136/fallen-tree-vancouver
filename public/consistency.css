@@ -74,3 +74,10 @@ body[data-page='/explore-my-work'] .rhythm-title:not(.first-section)>.section-co
 .rhythm-stack ol p{text-align:left!important}
 /* Keep a clear desktop gutter between market copy and its action. */
 @media(min-width:768px){.find-market{display:grid;grid-template-columns:100px minmax(0,1fr) auto;column-gap:clamp(32px,4vw,56px)}.find-market>div{min-width:0}.find-market>a{margin:0;justify-self:end}}
+/* Balance desktop actions with their associated copy. */
+@media(min-width:768px){
+.rhythm-split .cell-button .cell-inner{align-items:center}
+.find-market{grid-template-columns:100px minmax(0,1fr) minmax(180px,30%);justify-content:normal;column-gap:clamp(32px,3vw,48px)}
+.find-market>div{max-width:650px}
+.find-market>a{justify-self:center}
+}
