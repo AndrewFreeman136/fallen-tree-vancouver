@@ -83,3 +83,8 @@ body[data-page='/explore-my-work'] .rhythm-title:not(.first-section)>.section-co
 }
 
 @media(min-width:768px){.rhythm-split .layout{grid-template-rows:auto auto auto!important;align-content:center!important;row-gap:22px!important}.rhythm-split .layout>.cell-image{grid-row:1 / 4!important}.rhythm-split .layout>.cell-text,.rhythm-split .layout>.cell-button{align-self:center}}
+
+/* Keep each process marker beside its left-aligned step. */
+#section-68f096adce85d5141f959667 .cell-text ol{max-width:720px;width:100%;margin:0 auto;padding-left:26px;text-align:left}
+#section-68f096adce85d5141f959667 .cell-text ol li p{text-align:left!important;margin:0}
+#section-68f096adce85d5141f959667 .cell-text ol li{padding-left:6px}
