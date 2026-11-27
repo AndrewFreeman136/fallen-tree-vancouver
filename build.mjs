@@ -41,6 +41,10 @@ function composeForm(b,slug){
  return `<form class="enquiry" action="https://formsubmit.co/fallentreevancouver@gmail.com" method="POST" data-enquiry="${reserve?'preservation':'general'}"><input type="hidden" name="_subject" value="${reserve?'Flower preservation enquiry — Fallen Tree Vancouver':'Website enquiry — Fallen Tree Vancouver'}"><input type="hidden" name="_next" value="${origin}/thank-you/"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true"><p class="email-notice">Send your enquiry here. For flower preservation, we will confirm availability by email; submitting this form does not reserve a date.</p><div class="name-fields"><label>First Name (required)<input name="firstName" autocomplete="given-name" maxlength="100" required></label><label>Last Name (required)<input name="lastName" autocomplete="family-name" maxlength="100" required></label></div><label>Email (required)<input type="email" name="email" autocomplete="email" maxlength="254" required></label>${reserve?'<label>Subject: Flower Preservation (required)<input name="subject" value="Flower Preservation" maxlength="200" required></label>':''}<label>Message (required)<textarea name="message" required maxlength="10000" rows="4" placeholder="${reserve?"Please tell us about your flowers (wedding, memorial, other) and the type of piece you’re interested in (heart block, tray, etc.)":"Tell us how we can help - general questions, custom orders, or anything else."}"></textarea></label>${reserve?'<label>Event Date<input type="date" name="eventDate"></label>':''}<p class="direct-email">Your details are processed by <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener">FormSubmit</a> to deliver this enquiry to us.</p><button class="button" type="submit">Send enquiry</button><p class="direct-email">Or email <a href="mailto:fallentreevancouver@gmail.com${reserve?'?subject=Flower%20Preservation':''}">fallentreevancouver@gmail.com</a></p></form>`;
 }
 const instagram='<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>';
+function buttonLabel(label){
+ const text=String(label??'').trim().replace(/^boook\b/i,'Book').toLowerCase();
+ return (text.charAt(0).toUpperCase()+text.slice(1)).replace(/\binstagram\b/g,'Instagram').replace(/\bshop makers\b/g,'Shop Makers');
+}
 function block(b,slug){
  let inner=''; const selector=`#${b.id}`;
  for(const mode of ['mobile','desktop']){
@@ -63,7 +67,7 @@ function block(b,slug){
    inner=`<div class="image-frame ${esc(shape)} ${b.stretched?'stretched':''}">${img(b,'loading="lazy"')}</div>`;
    if(b.href)inner=`<a class="image-link" href="${esc(b.href)}">${inner}</a>`;
  }
- if(b.type==='button')inner=`<a class="button ${esc(b.variant)}" href="${esc(b.href==='/cart'?'/contact':b.href)}">${esc(b.label)}</a>`;
+ if(b.type==='button')inner=`<a class="button ${esc(b.variant)}" href="${esc(b.href==='/cart'?'/contact':b.href)}">${esc(buttonLabel(b.label))}</a>`;
  if(b.type==='accordion') inner=b.items.map(q=>`<details><summary>${esc(q.q)}</summary><div class="answer">${q.a}</div></details>`).join('');
  if(b.type==='form')inner=composeForm(b,slug);
  if(b.type==='social')inner=`<a class="social-link" href="https://www.instagram.com/fallentreevancouver/" aria-label="Instagram">${instagram}</a>`;
